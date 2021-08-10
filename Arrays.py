@@ -21,4 +21,29 @@ def find_missing(arr1, arr2):
         if num1 != num2:
             return num1
         
-    return arr1[-1]  
+    return arr1[-1] 
+
+
+#Max Consecutive Ones
+
+nums = [1,0,1,1,0,1,1,1,1,1]
+
+    def findMaxConsecutiveOnes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        count = 0
+        result = 0
+        n = len(nums)
+        
+        for i in range(0, n):
+            if nums[i] == 0:
+                count = 0
+            else:
+                count+=1
+                result = max(result, count)
+                
+        return result 
+    
+    
