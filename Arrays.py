@@ -46,4 +46,25 @@ nums = [1,0,1,1,0,1,1,1,1,1]
                 
         return result 
     
-    
+  
+
+
+# Find Numbers with Even Number of Digits
+
+def findNumbers(nums):
+
+        dig=0
+        
+        for x in nums:
+            count =0
+            while x!=0:
+                x//=10
+                count+=1
+            if count%2 ==0:
+                dig+=1
+                
+        return dig   
+nums =[555,901,482,1771]
+
+
+findNumbers(nums)
